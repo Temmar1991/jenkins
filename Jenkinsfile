@@ -1,10 +1,8 @@
 pipeline {
   agent {
-    node {
-      label 'docker-slave'
-    }
-
+    label 'docker-slave'
   }
+
   stages {
     stage('Build') {
       steps {
@@ -21,4 +19,5 @@ pipeline {
         echo 'Deploying...'  
       }
     }
+  }
 }
