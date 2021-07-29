@@ -6,14 +6,18 @@ pipeline {
 
   }
   stages {
-    stage('') {
+    stage('Build') {
       steps {
-        warnError(message: 'Something goes wrong') {
-          sh 'echo "It\'s working"'
+        echo 'Building...'
         }
 
       }
+    stage('Testing') {
+      steps {
+        echo 'Testing...'
     }
-
+    stage('Deploy') {
+      steps {
+        echo 'Deploying...'  
   }
 }
